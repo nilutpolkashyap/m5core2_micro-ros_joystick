@@ -100,7 +100,7 @@ void setup() {
   RCCHECK(rclc_node_init_default(&node, "m5stack_controller_node", "", &support));
 
   // create publisher
-  RCCHECK(rclc_publisher_init_best_effort(
+  RCCHECK(rclc_publisher_init_default(
     &publisher,
     &node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
